@@ -13,9 +13,9 @@ export type TaskPriority = 'Low' | 'Medium' | 'High';
 export type TaskStatus = 'To-do' | 'In Progress' | 'Completed';
 
 export interface Person {
-  id: string;
-  name: string;
-  avatar: string;
+  id?: string;
+  name?: string;
+  avatar?: string;
 }
 
 export interface Task {
