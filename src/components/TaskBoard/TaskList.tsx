@@ -1,6 +1,6 @@
 import React from 'react';
 import { Plus } from 'lucide-react';
-import { Task, TaskStatus, useTask } from '@/context/TaskContext';
+import { TaskStatus, useTask } from '@/context/TaskContext';
 import TaskItem from './TaskItem';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
