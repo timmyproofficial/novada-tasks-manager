@@ -23,20 +23,20 @@ const Header: React.FC<HeaderProps> = ({ onNewTask }) => {
         </div>
 
         <div className="flex items-center space-x-2">
-          <div>
+          <div className="flex">
             <Avatar>
               <AvatarImage src={userMale} />
               <AvatarFallback>AJ</AvatarFallback>
             </Avatar>
-            <Avatar>
+            <Avatar className="ml-[-15px]">
               <AvatarImage src={userFem} />
               <AvatarFallback>JS</AvatarFallback>
             </Avatar>
-            <Avatar>
+            <Avatar className="ml-[-15px]">
               <AvatarImage src={userMale} />
               <AvatarFallback>TW</AvatarFallback>
             </Avatar>
-            <Avatar>
+            <Avatar className="ml-[-15px]">
               <AvatarImage src={userFem} />
               <AvatarFallback>ML</AvatarFallback>
             </Avatar>
