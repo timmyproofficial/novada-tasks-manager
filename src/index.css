@@ -13,7 +13,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 242 72% 60%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -35,19 +35,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -98,4 +91,64 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Custom Styles for Task Manager */
+.task-item:hover .task-actions {
+  opacity: 1;
+}
+
+.task-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.badge-dashboard {
+  @apply bg-dashboard/10 text-dashboard;
+}
+
+.badge-mobile-app {
+  @apply bg-mobile-app/10 text-mobile-app;
+}
+
+.priority-low {
+  @apply bg-low/10 text-low;
+}
+
+.priority-medium {
+  @apply bg-medium/10 text-medium;
+}
+
+.priority-high {
+  @apply bg-high/10 text-high;
+}
+
+/* Avatar Group Styles */
+.avatar-group .avatar:not(:first-child) {
+  margin-left: -0.5rem;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+  border-radius: 20px;
+}
+
+/* Date Picker Styles */
+.date-range-picker .react-datepicker-wrapper {
+  width: 100%;
+}
+
+.date-range-picker .react-datepicker__input-container input {
+  width: 100%;
 }
