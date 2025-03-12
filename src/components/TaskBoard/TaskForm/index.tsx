@@ -77,7 +77,7 @@ const TaskForm: React.FC<TaskFormProps> = ({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[600px] animate-fade-in animate-slide-in">
+      <DialogContent className="sm:max-w-[600px] animate-fade-in">
         <DialogHeader>
           <DialogTitle className="text-xl">Create New Task</DialogTitle>
         </DialogHeader>

@@ -40,7 +40,9 @@ const TaskItem: React.FC<TaskItemProps> = ({ task }) => {
 
       {/* Description Column */}
       <TableCell className="py-3 text-sm text-gray-600 truncate">
-        {task.description && task.description !== '-' ? task.description : '—'}
+        {task.description && task.description !== '-'
+          ? task.description.slice(0, 40)
+          : '—'}
       </TableCell>
 
       {/* Estimation Column */}
@@ -52,8 +54,10 @@ const TaskItem: React.FC<TaskItemProps> = ({ task }) => {
       </TableCell>
 
       {/* Type Column */}
-      <TableCell className="py-3">
-        <Badge className={cn('badge-' + getTypeClass(task.type))}>
+      <TableCell className="py-3 w-48">
+        <Badge
+          className={cn('badge-' + getTypeClass(task.type), 'rounded-none')}
+        >
           {task.type}
         </Badge>
       </TableCell>
