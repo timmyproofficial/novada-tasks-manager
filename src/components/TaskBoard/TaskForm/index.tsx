@@ -16,7 +16,7 @@ import { TaskNameField } from './TaskNameField';
 import { TaskDescriptionField } from './TaskDescriptionField';
 import { TaskDateFields } from './TaskDateFields';
 import { TaskTypeAndPriorityFields } from './TaskTypeAndPriorityFields';
-import { TaskAssigneeField } from './TaskAssigneeField';
+// import { TaskAssigneeField } from './TaskAssigneeField';
 
 interface TaskFormProps {
   open: boolean;
@@ -92,12 +92,12 @@ const TaskForm: React.FC<TaskFormProps> = ({
               <TaskDescriptionField control={form.control} />
               <TaskDateFields control={form.control} />
               <TaskTypeAndPriorityFields control={form.control} />
-              <TaskAssigneeField
+              {/* <TaskAssigneeField
                 control={form.control}
                 watch={form.watch}
                 setValue={form.setValue}
                 getValues={form.getValues}
-              />
+              /> */}
             </div>
 
             <DialogFooter>
