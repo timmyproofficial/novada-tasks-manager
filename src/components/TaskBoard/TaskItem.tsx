@@ -1,6 +1,6 @@
 import React from 'react';
 import { format } from 'date-fns';
-import { Task } from '@/context/TaskContext';
+import { formatDateRange, Task } from '@/context/TaskContext';
 import { Badge } from '@/components/ui/badge';
 import { Checkbox } from '@/components/ui/checkbox';
 import { MoreHorizontal } from 'lucide-react';
@@ -48,8 +48,9 @@ const TaskItem: React.FC<TaskItemProps> = ({ task }) => {
       {/* Estimation Column */}
       <TableCell className="py-3 text-xs text-gray-500">
         <span className="block truncate">
-          {format(task.startDate, 'MMM d, yyyy')} -{' '}
-          {format(task.dueDate, 'MMM d, yyyy')}
+          {/* {format(task.startDate, 'MMM d, yyyy')} -{' '}
+          {format(task.dueDate, 'MMM d, yyyy')} */}
+          {formatDateRange(task.startDate, task.dueDate)}
         </span>
       </TableCell>
 
@@ -75,7 +76,7 @@ const TaskItem: React.FC<TaskItemProps> = ({ task }) => {
       </TableCell>
 
       {/* Priority Column */}
-      <TableCell className="py-3 text-right">
+      <TableCell className="py-3">
         <Badge className={cn(getPriorityClass(task.priority))}>
           {task.priority}
         </Badge>

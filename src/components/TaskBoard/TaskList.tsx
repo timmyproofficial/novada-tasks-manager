@@ -79,7 +79,7 @@ const TaskList: React.FC<TaskListProps> = ({ status, onNewTask }) => {
               <TableHead className="w-[200px] text-xs font-medium text-gray-500">
                 People
               </TableHead>
-              <TableHead className="w-[100px] text-xs font-medium text-gray-500 text-right">
+              <TableHead className="w-[100px] text-xs font-medium text-gray-500">
                 Priority
               </TableHead>
               <TableHead className="w-[50px]"></TableHead>
